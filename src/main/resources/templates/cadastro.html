@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Config da Font-Family "Poppins"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Config da Font-Family "Poppins"-->
+    <link rel="stylesheet" href="/cadastro/styleButton.css">
+    <link rel="stylesheet" href="/cadastro/styleText.css">
+    <link rel="stylesheet" href="/cadastro/style.css">
+    <title>page-login</title>
+</head>
+<body>
+    
+<div class="container">
+    <div class="wave-container">
+        <h1 class="wave-text">
+            <div class="separet">
+                <span>T</span>
+                <span>A</span>
+                <span>S</span>
+                <span>K</span>
+            </div>
+            <div class="separet">
+                <span>F</span>
+                <span>O</span>
+                <span>R</span>
+                <span>C</span>
+                <span>E</span>
+            </div>
+        </h1>
+    </div>
+    <form action="/controller/cadastrar" method="post" id="form">
+        <input type="text" name="username" placeholder="username">
+        <select name="sexo">
+            <option value="masculino">masculino</option>
+            <option value="Feminino">feminino</option>
+            <option value="other">other</option>
+        </select>
+        <input type="text" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="password" id="password">
+        <input type="password" placeholder="ConfirmPassword" id="confirmPassword">
+        <span id="alertErro" style="color: red"></span>
+        <a class="animated-button1" onclick="alert('clicou')" id="botão">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Confirmar
+        </a>
+        <p class="linkLogin">
+            <span>Já tem um Login?</span>
+            <span><a href="/page/login">Clique Aqui!!</a></span>
+        </p>
+    </form>
+</div>
+    <script>
+        var password = document.getElementById("password")
+        var confirmPassword = document.getElementById("confirmPassword")
+        var button = document.getElementById("botão")
+        var alertErro = document.getElementById("alertErro")
+        button.onclick = function(){
+            if(password.value != "" || confirmPassword.value != ""){
+                alertErro.textContent = (password.value != confirmPassword.value)? "As Senhas não são iguais" :
+                    "";
+            if(password.value == confirmPassword.value){
+                document.getElementById("form").submit();
+                return false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

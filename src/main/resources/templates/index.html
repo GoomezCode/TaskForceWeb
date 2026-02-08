@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Config da Font-Family "Poppins"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Config da Font-Family "Poppins"-->
+     <link rel="stylesheet" href="/index/styleText.css">
+     <link rel="stylesheet" href="/index/style.css">
+    <title>Task Force</title>
+</head>
+<body>
+    <div class="container">
+        <div class="apresentacao">
+            <h2>Account: <span th:text="${userName}"></span></h2>
+        </div>
+        
+
+        <div class="wave-container">
+            <h1 class="wave-text">
+                <div class="separet">
+                    <span>T</span>
+                    <span>A</span>
+                    <span>S</span>
+                    <span>K</span>
+                </div>
+                <div class="separet">
+                    <span>F</span>
+                    <span>O</span>
+                    <span>R</span>
+                    <span>C</span>
+                    <span>E</span>
+                </div>
+            </h1>
+        </div>
+
+        <div class="form">
+            <input type="text" id="tarefa" placeholder="Digite sua Tarefa">
+            <span id="alerta"></span>
+
+            <button onclick="confirmTask()">confirmar</button>
+        </div>
+
+        <div id="containerTarefa">
+            
+        </div>
+
+        <div class="containerLink">
+            <span>Deseja se Desconectar??</span>
+            <span><a href="/controller/deletAll"> Clique aqui!!!</a></span>
+        </div>
+    </div>
+    <script src="/index/script.js"></script>
+</body>
+</html>

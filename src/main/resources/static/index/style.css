@@ -1,0 +1,118 @@
+:root{
+    --cor1:#4727CD;
+    --cor2:#351DA3;
+    --cor2:#241379;
+    --cor4:#120A4F;
+    --cor5:#000025;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background: url("img/background.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 85vh;
+}
+
+.container{
+    padding:20px;
+
+    width: 90%;
+    margin: 20px auto 0px auto;
+
+    border-radius: 10px 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container .apresentacao{
+    color: white;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.form{
+    margin: 50px auto 0px auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form input, .form button{
+    background-color: rgba(0, 0, 0, 0.09);    
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+.form input{
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    color:white;
+}
+.form input::placeholder{
+    color: gray;
+}
+.form input:focus{
+    transform: scale(110%);
+}
+
+.form button{
+    margin: 5px auto 0px auto;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    padding: 10px 0px 10px 0px;
+    width: 70%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form span{
+    border-radius: 5px;
+    background-color: red;  
+    font-weight: bold;
+    padding: 0px 10px 0px 10px ;
+    margin: 0px auto 0px auto;
+    font-size: 15px;
+}
+
+#containerTarefa{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto 0px auto;
+    width: 50%;
+    padding: 10px 0px 10px 0px ;
+
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#containerTarefa span{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.containerLink{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: -20px;
+    margin-top: 10px;
+}
+.containerLink a{
+    color: red;
+    margin-left: 20px;
+}
